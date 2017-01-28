@@ -325,7 +325,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .gtco-cover {
-  height: 900px;
+  height: 500px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -359,7 +359,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .gtco-cover .display-t,
 .gtco-cover .display-tc {
-  height: 900px;
+  height: 500px;
   display: table;
   width: 100%;
 }
@@ -1889,4 +1889,14 @@ form label {
   border: 2px solid #17B794;
 }
 
+.texto_logo_secundario{
+	font-size: 12px;
+}
+
+.btn-painel-cliente{
+	padding: 10px 10px !important;
+}
+#gtco-footer{
+	background: #efefef;
+}
 /*# sourceMappingURL=style.css.map */
