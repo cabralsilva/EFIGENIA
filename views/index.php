@@ -1,3 +1,6 @@
+<?php 
+	include '../util/Constantes.php';
+?>
 <!-- https://freehtml5.co/demos/aesthetic/portfolio.html -->
 <!DOCTYPE html>
 <html lang="pt">
@@ -24,28 +27,28 @@
 	<!-- <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet"> -->
 	
 	<!-- Animate.css -->
-	<link rel="stylesheet" href="../resources/template/css/animate.css">
+	<link rel="stylesheet" href="<?= BaseProjeto ?>resources/template/css/animate.css">
 	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="../resources/template/css/icomoon.css">
+	<link rel="stylesheet" href="<?= BaseProjeto ?>resources/template/css/icomoon.css">
 	<!-- Themify Icons-->
-	<link rel="stylesheet" href="../resources/template/css/themify-icons.css">
+	<link rel="stylesheet" href="<?= BaseProjeto ?>resources/template/css/themify-icons.css">
 	<!-- Bootstrap  -->
 <!-- 	<link rel="stylesheet" href="../resources/template/css/bootstrap.css"> -->
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
 
 
 	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="../resources/template/css/magnific-popup.css">
+	<link rel="stylesheet" href="<?= BaseProjeto ?>resources/template/css/magnific-popup.css">
 
 	<!-- Owl Carousel  -->
-	<link rel="stylesheet" href="../resources/template/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="../resources/template/css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="<?= BaseProjeto ?>resources/template/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="<?= BaseProjeto ?>resources/template/css/owl.theme.default.min.css">
 
 	<!-- Theme style  -->
-	<link rel="stylesheet" href="../resources/template/css/style.css">
+	<link rel="stylesheet" href="<?= BaseProjeto ?>resources/template/css/style.css">
 
 	<!-- Modernizr JS -->
-	<script src="../resources/template/js/modernizr-2.6.2.min.js"></script>
+	<script src="<?= BaseProjeto ?>resources/template/js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -94,7 +97,7 @@
 		</div>
 	</nav>
 	
-	<header id="gtco-header" class="gtco-cover" role="banner" style="background-image:url(../resources/template/images/img_bg_6.jpg); background-size: 100% 100%;">
+	<header id="gtco-header" class="gtco-cover" role="banner" style="background-image:url(<?= BaseProjeto ?>resources/template/images/img_bg_6.jpg); background-size: 100% 100%;">
 		<div class="overlay"></div>
 		<div class="gtco-container">
 			<div class="row">
@@ -451,21 +454,21 @@
 	</div>
 	
 	<!-- jQuery -->
-	<script src="../resources/template/js/jquery.min.js"></script>
+	<script src="<?= BaseProjeto ?>resources/template/js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
-	<script src="../resources/template/js/jquery.easing.1.3.js"></script>
+	<script src="<?= BaseProjeto ?>resources/template/js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
-	<script src="../resources/template/js/bootstrap.min.js"></script>
+	<script src="<?= BaseProjeto ?>resources/template/js/bootstrap.min.js"></script>
 	<!-- Waypoints -->
-	<script src="../resources/template/js/jquery.waypoints.min.js"></script>
+	<script src="<?= BaseProjeto ?>resources/template/js/jquery.waypoints.min.js"></script>
 	<!-- Carousel -->
-	<script src="../resources/template/js/owl.carousel.min.js"></script>
+	<script src="<?= BaseProjeto ?>resources/template/js/owl.carousel.min.js"></script>
 	<!-- countTo -->
-	<script src="../resources/template/js/jquery.countTo.js"></script>
+	<script src="<?= BaseProjeto ?>resources/template/js/jquery.countTo.js"></script>
 	<!-- Magnific Popup -->
-	<script src="../resources/template/js/jquery.magnific-popup.min.js"></script>
-	<script src="../resources/template/js/magnific-popup-options.js"></script>
+	<script src="<?= BaseProjeto ?>resources/template/js/jquery.magnific-popup.min.js"></script>
+	<script src="<?= BaseProjeto ?>resources/template/js/magnific-popup-options.js"></script>
 	<!-- Main -->
-	<script src="../resources/template/js/main.js"></script>
+	<script src="<?= BaseProjeto ?>resources/template/js/main.js"></script>
 </body>
 </html>

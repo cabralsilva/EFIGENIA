@@ -1,0 +1,4 @@
+# Provide Specific Index Page (Set the default handler)
+DirectoryIndex /efigenia/views/index.php
+
+Header add Access-Control-Allow-Origin "http://www.projetoefigenia.com.br" 
