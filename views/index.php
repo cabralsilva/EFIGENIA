@@ -68,7 +68,7 @@
 						<li><a href="#"><i class="ti-twitter-alt"></i> </a></li>
 						<li><a href="#"><i class="icon-mail2"></i></a></li>
 						<li><a href="#"><i class="ti-facebook"></i></a></li>
-						<li><a href="#" class="btn btn-white btn-outline btn-painel-cliente">Painel do cliente</a></li>
+						<li><a href="<?= BaseProjeto ?>login" class="btn btn-white btn-outline btn-painel-cliente">Painel do cliente</a></li>
 					</ul>
 				</div>
 			</div>
@@ -123,7 +123,7 @@
 							<i class="ti-briefcase"></i>
 						</span>
 						<h3>Confiabilidade + Segurança</h3>
-						<p>Algoritmos de inteligência computacional inseridos em uma infra-estrutura de servidores que garantem a disponibilizão dos serviços 24 horas por dia dão segurança as informações prestadas.  </p>
+						<p>Algoritmos de inteligência computacional inseridos em uma infraestrutura de servidores que garantem a disponibilização dos serviços de monitoramento remoto 24 horas por dia,  proporcionando segurança as informações prestadas.  </p>
 <!-- 						<p><a href="#" class="btn btn-white btn-outline">Learn More</a></p> -->
 					</div>
 				</div>
@@ -133,7 +133,7 @@
 							<i class="glyphicon glyphicon-globe"></i>
 						</span>
 						<h3>Liberdade</h3>
-						<p>Pensado e desenvolvido para que o paciente não mude seus hábitos durante a coleta dos dados, assim temos informações mais próximas do cotidiano do paciente. </p>
+						<p>Pensado e desenvolvido para que o usuário não mude sua rotina durante a coleta dos dados, assim o sistema conta com informações reais do cotidiano do paciente acerca da frequência cardíaca e saturação sanguínea. </p>
 <!-- 						<p><a href="#" class="btn btn-white btn-outline">Learn More</a></p> -->
 					</div>
 				</div>
@@ -143,7 +143,7 @@
 							<i class="ti-timer"></i>
 						</span>
 						<h3>Alertas em tempo real</h3>
-						<p>Dados colhidos e armazenados em tempo real em uma base de dados centralizada e analisados por nossos algoritmos que enviam alertas caso uma anormalidade seja detectada. </p>
+						<p>Dados coletados e armazenados em tempo real em uma base de dados centralizada, sendo analisados por algoritmos  que  enviam alertas caso  alguma  anormalidade seja detectada.  </p>
 <!-- 						<p><a href="#" class="btn btn-white btn-outline">Learn More</a></p> -->
 					</div>
 				</div>
