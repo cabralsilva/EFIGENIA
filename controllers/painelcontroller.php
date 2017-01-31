@@ -8,10 +8,10 @@
 	}
 	if (isset($_POST['servico'])){
 		switch ($_POST['servico']) {
-			case 'getHistorical30':
+			case 'getHistorical':
 				$ls = new LeiturasService();
-				$listHistorical = $ls->getHistorical($_POST['idpaciente'], 30);
-				header('Content-type: application/json');
+				$listHistorical = $ls->getHistorical($_POST['idpaciente'], $_POST['qtde']);
+// 				header('Content-type: application/json');
 				echo json_encode($listHistorical);
 				break;
 			case 'getHistoricalSync':

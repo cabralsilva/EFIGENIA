@@ -9,31 +9,53 @@ $(function () {
         totalPoints = 300;
 
     function getRandomData() {
-
-        if (data.length > 0)
+    	
+    	
+        if (data.length > 0){
             data = data.slice(1);
-
+        }
+//        console.log(data);
         // Do a random walk
-
+//        y = 0;
         while (data.length < totalPoints) {
+        	
+    		$.ajax({
+    	    	url : "http://localhost:8080/efigenia/controllers/painelcontroller.php",
+    	        type: 'POST',
+    	        async: false,
+    	        data: {
+    		        servico: "getHistorical",
+    		        qtde: 300,
+    		        idpaciente: 1
+    	        },
+    	        success: function (e) {
+    	        	var obj = JSON.parse(e);
+    		        
+    		        for (i in obj){
+//    		        	console.log(obj[i].sao2);
+    		        	data.push(obj[i].sao2);
+    		        }
+    	        }
+    	    });
+        	        	
+//            var prev = data.length > 0 ? data[data.length - 1] : 50;
+//            
+//            y = prev + Math.random() * 10 - 5;
+//
+//            if (y < 0) {
+//                y = 50;
+//            } else if (y > 100) {
+//                y = 100;
+//            }
 
-            var prev = data.length > 0 ? data[data.length - 1] : 50,
-                y = prev + Math.random() * 10 - 5;
-
-            if (y < 0) {
-                y = 0;
-            } else if (y > 100) {
-                y = 100;
-            }
-
-            data.push(y);
+//            data.push(y);
         }
 
         // Zip the generated y values with the x values
 
         var res = [];
         for (var i = 0; i < data.length; ++i) {
-            res.push([i, data[i]])
+            res.push([i, data[i]]);
         }
 
         return res;
@@ -41,7 +63,7 @@ $(function () {
 
     // Set up the control widget
 
-    var updateInterval = 30;
+    var updateInterval = 100;
     $("#updateInterval").val(updateInterval).change(function () {
         var v = $(this).val();
         if (v && !isNaN(+v)) {

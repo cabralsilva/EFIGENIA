@@ -21,7 +21,7 @@
 
 		public function getHistorical($idPaciente,$qtdRegister)
 		{
-			$query = "SELECT leituras.* FROM leituras WHERE leituras.fk_paciente = $idPaciente ORDER BY leituras.id_leituras LIMIT $qtdRegister";
+			$query = "SELECT leituras.* FROM leituras WHERE leituras.fk_paciente = $idPaciente ORDER BY leituras.id_leituras DESC LIMIT $qtdRegister";
 			$result = parent::getCon()->query($query);
 			$retorno = array();
 			while ($row = $result->fetch_assoc()){
