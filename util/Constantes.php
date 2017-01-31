@@ -9,7 +9,7 @@
 	define('NOME_BANCO', 'projetoefigeni');
 	define('USR_BANCO', 'projetoefigeni');
 	define('PWD_BANCO', 'efigenia0202');
-	define('BaseProjeto', 'http://localhost/efigenia/');
-	define('BaseSite', 'http://localhost/efigenia/');
+	define('BaseProjeto', 'http://localhost:8080/efigenia/');
+	define('BaseSite', 'http://localhost:8080/efigenia/');
 
 ?>
