@@ -10,5 +10,6 @@
 	define('USR_BANCO', 'projetoefigeni');
 	define('PWD_BANCO', 'efigenia0202');
 	define('BaseProjeto', 'http://localhost/efigenia/');
+	define('BaseSite', 'http://localhost/efigenia/');
 
 ?>

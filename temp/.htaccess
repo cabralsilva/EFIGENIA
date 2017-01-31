@@ -1,0 +1,12 @@
+DirectoryIndex /efigenia/views/index.php
+Header add Access-Control-Allow-Origin "*"
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    #RewriteCond %{REQUEST_FILENAME} !-f
+    
+	RewriteRule ^login/?$ efigenia/views/login.php [NC,L]
+	RewriteRule ^dashboard/?$ efigenia/views/panelclient/dashboard.php [NC,L]
+	
+	#RewriteRule ^resources/(css|js|img)/(.*)?$ /$1/$2 [L,QSA,R=301]
+</IfModule>

@@ -68,7 +68,7 @@
 						<li><a href="#"><i class="ti-twitter-alt"></i> </a></li>
 						<li><a href="#"><i class="icon-mail2"></i></a></li>
 						<li><a href="#"><i class="ti-facebook"></i></a></li>
-						<li><a href="<?= BaseProjeto ?>login" class="btn btn-white btn-outline btn-painel-cliente">Painel do cliente</a></li>
+						<li><a href="login" class="btn btn-white btn-outline btn-painel-cliente">Painel do cliente</a></li>
 					</ul>
 				</div>
 			</div>
@@ -79,9 +79,9 @@
 				<div class="col-xs-6 text-right menu-1">
 					<ul>
 						<li class="active"><a href="index.php">Início</a></li>
-						<li><a href="about.html">Entenda</a></li>
+						<li><a href="#">Entenda</a></li>
 						<li class="has-dropdown">
-							<a href="services.html">Conheça-nos</a>
+							<a href="#">Conheça-nos</a>
 							<ul class="dropdown">
 								<li><a href="#">Nosso time</a></li>
 								<li><a href="#">Em que acreditamos</a></li>
@@ -89,7 +89,7 @@
 								<li><a href="#">O que queremos</a></li>
 							</ul>
 						</li>
-						<li><a href="contact.html">Contato</a></li>
+						<li><a href="#">Contato</a></li>
 					</ul>
 				</div>
 			</div>

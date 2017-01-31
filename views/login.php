@@ -57,7 +57,7 @@
 <!-- 					</li> -->
 					
 					<li class="">						
-						<a href="<?= BaseProjeto ?>" class="">
+						<a href="<?= BaseSite ?>" class="">
 							<i class="icon-chevron-left"></i>
 							Voltar a home
 						</a>
@@ -79,7 +79,7 @@
 	
 	<div class="content clearfix">
 		
-		<form action="#" method="post">
+		<form id="frmLogin" action="#" method="post">
 		
 			<h1>Acesso restrito</h1>		
 			
@@ -89,12 +89,12 @@
 				
 				<div class="field">
 					<label for="username">CPF</label>
-					<input type="text" id="username" name="username" value="" placeholder="Username" class="login username-field" required="required" />
+					<input type="text" id="cpfusr" name="username" value="" placeholder="CPF" class="login username-field" required="required" />
 				</div> <!-- /field -->
 				
 				<div class="field">
 					<label for="password">Senha:</label>
-					<input type="password" id="password" name="password" value="" placeholder="Password" class="login password-field" required="required"/>
+					<input type="password" id="pwdusr" name="password" value="" placeholder="Senha" class="login password-field" required="required"/>
 				</div> <!-- /password -->
 				
 			</div> <!-- /login-fields -->
@@ -129,7 +129,31 @@
 <script src="<?= BaseProjeto ?>resources/template2/js/bootstrap.js"></script>
 
 <script src="<?= BaseProjeto ?>resources/template2/js/signin.js"></script>
-
+<script type="text/javascript">
+	$("#frmLogin").submit(function () {
+		$.ajax({
+	    	url : "<?= BaseProjeto ?>controllers/logincontroller.php",
+// 	        url: window.location.pathname,
+	        type: 'POST',
+	        data: {
+		        servico: "autenticarAcesso",
+		        usr: $("#cpfusr").val(),
+		        pwd: $("#pwdusr").val()
+	        },
+	        success: function (data) {
+		        if (data == "null"){
+			        console.log("Not found user");
+		        }
+		        else{
+		        	console.log(data);
+		        	window.location = "<?= BaseSite ?>dashboard";
+			    }
+	            
+	        }
+	    });
+	    return false;
+	});
+</script>
 </body>
 
 </html>
