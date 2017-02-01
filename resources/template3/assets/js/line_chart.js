@@ -6,7 +6,7 @@ $(function () {
     // be fetched from a server
 
     var data = [],
-        totalPoints = 300;
+        totalPoints = 100, lastRead = 0, lastValue = 0;
 
     function getRandomData() {
     	
@@ -14,56 +14,95 @@ $(function () {
         if (data.length > 0){
             data = data.slice(1);
         }
-//        console.log(data);
+// console.log(data);
         // Do a random walk
-//        y = 0;
-        while (data.length < totalPoints) {
-        	
-    		$.ajax({
-    	    	url : "http://localhost:8080/efigenia/controllers/painelcontroller.php",
-    	        type: 'POST',
-    	        async: false,
-    	        data: {
-    		        servico: "getHistorical",
-    		        qtde: 300,
-    		        idpaciente: 1
-    	        },
-    	        success: function (e) {
-    	        	var obj = JSON.parse(e);
-    		        
-    		        for (i in obj){
-//    		        	console.log(obj[i].sao2);
-    		        	data.push(obj[i].sao2);
-    		        }
-    	        }
-    	    });
-        	        	
-//            var prev = data.length > 0 ? data[data.length - 1] : 50;
-//            
-//            y = prev + Math.random() * 10 - 5;
-//
-//            if (y < 0) {
-//                y = 50;
-//            } else if (y > 100) {
-//                y = 100;
-//            }
+// y = 0;
+        if (data.length == 0){
+//        	 while (data.length < totalPoints) {
+//             	console.log("Buscando novos dados");
+         		$.ajax({
+         	    	url : "http://localhost/efigenia/controllers/painelcontroller.php",
+         	        type: 'POST',
+         	        async: false,
+         	        data: {
+         		        servico: "getHistorical",
+         		        qtde: totalPoints,
+         		        idpaciente: 1
+         	        },
+         	        success: function (e) {
+         	        	var obj = JSON.parse(e);
+         		        console.log("Tamanho: " + obj);
+         		        for (i in obj){
+// console.log(obj[i].sao2);
+         		        	data.push(obj[i].sao2);
+         		        }
+         		        lastRead = obj[0].id_leituras;
+         		        lastValue = obj[0].sao2;
+         		        data.reverse();
+         	        }
+         	    });
+//        	 }
+//        	 console.log(lastRead);
+    	 }else{
+    		 
+//    		 data.push(75);
+    		 
+    		 $.ajax({
+				url : "http://localhost/efigenia/controllers/painelcontroller.php",
+			    type: 'POST',
+//			    async: false,
+			    data: {
+			        servico: "getHistoricalSync",
+			        lastread: lastRead,
+			        idpaciente: 1
+			    },
+			    success: function (e) {
+			    	var obj = JSON.parse(e);
+//			    	console.log(obj);
+			    	if (obj != null && obj != "null"){
+				        for (i in obj){
+				        	data.push(obj[i].sao2);
+				        }
+				        lastRead = obj[0].id_leituras;
+				        lastValue = obj[0].sao2;
+//				        data.reverse();
+			    	}else{
+			    		data.push(lastValue);
+			    	}
 
-//            data.push(y);
-        }
+		    	}
+    		 });
+	 	}
+       
+        	        	
+// var prev = data.length > 0 ? data[data.length - 1] : 50;
+//            
+// y = prev + Math.random() * 10 - 5;
+//
+// if (y < 0) {
+// y = 50;
+// } else if (y > 100) {
+// y = 100;
+// }
+
+// data.push(y);
+//        }
 
         // Zip the generated y values with the x values
 
+        
+//        console.log(data.length);
         var res = [];
         for (var i = 0; i < data.length; ++i) {
             res.push([i, data[i]]);
         }
-
+        
         return res;
     }
 
     // Set up the control widget
 
-    var updateInterval = 100;
+    var updateInterval = 300;
     $("#updateInterval").val(updateInterval).change(function () {
         var v = $(this).val();
         if (v && !isNaN(+v)) {
@@ -150,7 +189,7 @@ $(function () {
         ++i;
     });
 
-    // insert checkboxes 
+    // insert checkboxes
     var choiceContainer = $("#choices");
     $.each(datasets, function (key, val) {
         choiceContainer.append("<br/><input type='checkbox' name='" + key +
@@ -325,7 +364,7 @@ $(function () {
 });
 
 
-//END TRACKING CHART
+// END TRACKING CHART
 
 // MULTIPLE AXES CHART
 $(function () {

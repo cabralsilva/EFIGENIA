@@ -33,7 +33,7 @@
 
 		public function getSync($idPaciente, $lastRead)
 		{
-			$query = "SELECT leituras.* FROM leituras WHERE leituras.fk_paciente = $idPaciente AND leituras.id_leituras > $lastRead ORDER BY leituras.id_leituras";
+			$query = "SELECT leituras.* FROM leituras WHERE leituras.fk_paciente = $idPaciente AND leituras.id_leituras > $lastRead ORDER BY leituras.id_leituras DESC";
 			$result = parent::getCon()->query($query);
 			$retorno = array();
 			while ($row = $result->fetch_assoc()){

@@ -18,10 +18,10 @@
 				$ls = new LeiturasService();
 				$listSync = $ls->getSync($_POST['idpaciente'], $_POST['lastread']);
 				if (count($listSync) > 0){
-					header('Content-type: application/json');
+// 					header('Content-type: application/json');
 					echo json_encode($listSync);
 				}else{
-					header('Content-type: application/json');
+// 					header('Content-type: application/json');
 					echo json_encode(null);
 				}
 				break;
