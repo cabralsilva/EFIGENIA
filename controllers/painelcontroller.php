@@ -1,4 +1,5 @@
 <?php
+	header('Access-Control-Allow-Origin: *');
 	require_once ("../services/LeiturasService.php");
 	require_once ("../services/PacientesService.php");
 	require_once ("../services/UsuariosService.php");
