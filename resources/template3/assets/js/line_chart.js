@@ -18,7 +18,7 @@ $(function () {
         if (data.length == 0){
         	console.log("Primeira");
          		$.ajax({
-         	    	url : "http://localhost/efigenia/controllers/painelcontroller.php",
+         	    	url : "http://www.projetoefigenia.com.br/efigenia/controllers/painelcontroller.php",
          	        type: 'POST',
          	        async: false,
          	        data: {
@@ -128,7 +128,7 @@ $(function () {
     function getDados(){
     	console.log("Seg");
     	$.ajax({
-			url : "http://localhost/efigenia/controllers/painelcontroller.php",
+			url : "http://www.projetoefigenia.com.br/efigenia/controllers/painelcontroller.php",
 		    type: 'POST',
 		    data: {
 		        servico: "getHistoricalSync",
